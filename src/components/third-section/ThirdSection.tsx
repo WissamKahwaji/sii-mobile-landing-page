@@ -93,13 +93,13 @@ const ThirdSection = () => {
         </div>
       </div>
       <div className="bg-seconBackground py-10 px-2 md:px-20">
-        <p className="text-2xl font-header font-semibold text-primary text-center mt-8 mb-12">
-          عقود موثقة تضمن لك إنجاز المشروع على أكمل وجه
+        <p className="text-2xl font-header font-bold text-primary text-center mt-8 mb-12">
+          ضمن عقود موثقة تضمن لك إنجاز مشروعك نقدم لك :
         </p>
         <div className="grid grid-flow-row grid-cols-2 md:grid-cols-6 gap-8 md:gap-8 mt-8 ">
           {features.map(item => (
-            <div className="flex flex-row items-center justify-start p-2 rounded shadow-md">
-              <svg
+            <div className="flex flex-row items-center justify-center p-2 rounded shadow-md shadow-secondary/15">
+              {/* <svg
                 viewBox="0 0 665.8 1000"
                 fill="currentColor"
                 height="1em"
@@ -107,7 +107,7 @@ const ThirdSection = () => {
                 className="shrink-0 h-5 w-5 fill-current text-green-500"
               >
                 <path d="M248 850c-22.667 0-41.333-9.333-56-28L12 586C1.333 570-2.667 552.667 0 534s11.333-34 26-46 31.667-16.667 51-14c19.333 2.667 35 12 47 28l118 154 296-474c10.667-16 25-26 43-30s35.667-1.333 53 8c16 10.667 26 25 30 43s1.333 35.667-8 53L306 816c-13.333 21.333-32 32-56 32l-2 2" />
-              </svg>{" "}
+              </svg>{" "} */}
               <p className="font-body text-2xl text-gray-700">{item}</p>
             </div>
           ))}
