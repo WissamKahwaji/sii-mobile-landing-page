@@ -52,6 +52,9 @@ const ThirdSection = () => {
           </div>
         </div>
       </div>
+      <p className="text-2xl font-header font-semibold text-primary text-center mt-8 mb-12">
+        عقود موثقة تضمن لك إنجاز المشروع على أكمل وجه
+      </p>
       <div className="grid grid-flow-row grid-cols-2 md:grid-cols-6 gap-4 md:gap-8 mt-8 ">
         {features.map(item => (
           <div className="flex flex-row items-center justify-start">
