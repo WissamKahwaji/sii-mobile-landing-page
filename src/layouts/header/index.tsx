@@ -1,4 +1,3 @@
-import logo_black from "../../assets/logo_black.png";
 import { Link } from "react-router-dom";
 import {
   FiFacebook,
@@ -8,9 +7,29 @@ import {
   FiPhone,
 } from "react-icons/fi";
 import { MdWhatsapp } from "react-icons/md";
-import { BsTwitterX } from "react-icons/bs";
 import { FaSnapchat } from "react-icons/fa";
+import { BsTwitterX } from "react-icons/bs";
+import { useEffect, useState } from "react";
+import logo_black from "../../assets/logo_black.png";
+
 const Navbar = () => {
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+      setVisible(prevScrollPos > currentScrollPos || currentScrollPos < 10);
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos]); // Only prevScrollPos is needed as a dependency
+
   const socialMediaIcons = [
     {
       icon: <MdWhatsapp className="h-6 w-6" />,
@@ -37,18 +56,23 @@ const Navbar = () => {
       link: "https://twitter.com/siimedia",
     },
   ];
+
   return (
-    <header className="fixed left-0 top-0 z-[1001] w-full bg-slate-50 border-b border-border shadow-sm">
-      <nav className="flex flex-row md:flex-row items-center justify-between px-3 md:py-2 py-2 lg:px-8 lg:py-4 md:px-16  lg:justify-between  lg:items-center  w-full">
-        <div className=" flex items-center justify-between w-full lg:w-auto md:w-auto lg:justify-start gap-x-8 md:space-x-0 md:justify-center">
+    <header
+      className={`fixed left-0 top-0 z-[1001] w-full bg-slate-50 border-b border-border shadow-sm transition-transform duration-300 ease-in-out ${
+        visible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
+      <nav className="flex flex-row md:flex-row items-center justify-between px-3 md:py-2 py-2 lg:px-8 lg:py-4 md:px-16 lg:justify-between lg:items-center w-full">
+        <div className="flex items-center justify-between w-full lg:w-auto md:w-auto lg:justify-start gap-x-8 md:space-x-0 md:justify-center">
           <div className="text-2xl md:text-4xl font-bold text-primary">
-            <a href="/">
+            <Link to="/">
               <img
                 src={logo_black}
                 alt=""
-                className="h-auto w-24 sm:h-auto sm:w-24 md:h-auto md:w-24 lg:h-auto lg:w-36 object-cover "
+                className="h-auto w-24 sm:h-auto sm:w-24 md:h-auto md:w-24 lg:h-auto lg:w-36 object-cover"
               />
-            </a>
+            </Link>
           </div>
         </div>
         <div className="flex flex-col items-end justify-start">
