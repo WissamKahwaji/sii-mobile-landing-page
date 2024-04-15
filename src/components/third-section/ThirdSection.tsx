@@ -13,44 +13,44 @@ const ThirdSection = () => {
   const appType = [
     {
       title: "المراكز طبية",
-      icon: <MedicalServicesIcon className="w-6 h-6 mx-3 text-primary" />,
+      icon: <MedicalServicesIcon className="w-6 h-6 mx-2 text-primary" />,
     },
     {
       title: "تجارة إلكترونية",
-      icon: <AddShoppingCartIcon className="w-6 h-6 mx-3 text-primary" />,
+      icon: <AddShoppingCartIcon className="w-6 h-6 mx-2 text-primary" />,
     },
     {
       title: "المراكز التعليمية",
-      icon: <SchoolIcon className="w-6 h-6 mx-3 text-primary" />,
+      icon: <SchoolIcon className="w-6 h-6 mx-2 text-primary" />,
     },
     {
       title: "الشحن والتوصيل",
-      icon: <LocalShippingIcon className="w-6 h-6 mx-3 text-primary" />,
+      icon: <LocalShippingIcon className="w-6 h-6 mx-2 text-primary" />,
     },
     {
       title: "الشركات العقارية",
-      icon: <ApartmentIcon className="w-6 h-6 mx-3 text-primary" />,
+      icon: <ApartmentIcon className="w-6 h-6 mx-2 text-primary" />,
     },
     {
       title: "تأجير السيارات",
-      icon: <CarRentalRoundedIcon className="w-6 h-6 mx-3 text-primary" />,
+      icon: <CarRentalRoundedIcon className="w-6 h-6 mx-2 text-primary" />,
     },
     {
       title: "المراكز التجارية",
-      icon: <LocalMallRoundedIcon className="w-6 h-6 mx-3 text-primary" />,
+      icon: <LocalMallRoundedIcon className="w-6 h-6 mx-2 text-primary" />,
     },
     {
       title: "المطاعم",
-      icon: <RestaurantMenuRoundedIcon className="w-6 h-6 mx-3 text-primary" />,
+      icon: <RestaurantMenuRoundedIcon className="w-6 h-6 mx-2 text-primary" />,
     },
     {
       title: "خدمات منزلية",
-      icon: <HomeWorkRoundedIcon className="w-6 h-6 mx-3 text-primary" />,
+      icon: <HomeWorkRoundedIcon className="w-6 h-6 mx-2 text-primary" />,
     },
 
     {
       title: "شركات التأمين",
-      icon: <LocationCityRoundedIcon className="w-6 h-6 mx-3 text-primary" />,
+      icon: <LocationCityRoundedIcon className="w-6 h-6 mx-2 text-primary" />,
     },
   ];
   const features = [
