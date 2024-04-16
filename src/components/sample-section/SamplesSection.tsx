@@ -8,8 +8,11 @@ import app7 from "../../assets/samples/app7.png";
 import app8 from "../../assets/samples/app8.png";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-
-const SamplesSection = () => {
+import TitleAndButton from "../ui/TitleAndButton";
+interface SamplesSectionProps {
+  scrollToContact: (event: React.MouseEvent<HTMLDivElement>) => void;
+}
+const SamplesSection: React.FC<SamplesSectionProps> = ({ scrollToContact }) => {
   const appSamples = [app1, app2, app3, app4, app5, app6, app7, app8];
   const RESPONSIVE = {
     xxl: {
@@ -38,7 +41,7 @@ const SamplesSection = () => {
     },
   };
   return (
-    <div className="bg-seconBackground/60 px-3 text-center py-8">
+    <div className="bg-seconBackground px-3 text-center py-8">
       <p className="text-secondary font-body font-semibold text-2xl md:text-4xl">
         من خلال تطبيقك الالكتروني انشأ قناتك التسويقية الخاصة وحقق أفضل الأرباح
       </p>
@@ -58,6 +61,10 @@ const SamplesSection = () => {
           </div>
         ))}
       </Carousel>
+      <TitleAndButton
+        title="احصل على تطبيقك الخاص"
+        scrollToContact={scrollToContact}
+      />
     </div>
   );
 };

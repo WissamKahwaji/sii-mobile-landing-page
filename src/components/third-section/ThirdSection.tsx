@@ -22,8 +22,11 @@ import credit from "../../assets/icons/credit-card.png";
 import tools from "../../assets/icons/tools.png";
 import training from "../../assets/icons/training.png";
 import dailyIcon from "../../assets/icons/24-hours-support.png";
-
-const ThirdSection = () => {
+import TitleAndButton from "../ui/TitleAndButton";
+interface ThirdSectionProps {
+  scrollToContact: (event: React.MouseEvent<HTMLDivElement>) => void;
+}
+const ThirdSection: React.FC<ThirdSectionProps> = ({ scrollToContact }) => {
   const appType = [
     {
       title: "المراكز طبية",
@@ -119,10 +122,14 @@ const ThirdSection = () => {
   ];
   return (
     <div className="bg-slate-50 " style={{ direction: "rtl" }}>
-      <div className="bg-seconBackground py-10 px-2 md:px-20">
-        <p className="text-2xl font-header font-bold text-primary text-center mt-8 mb-12">
-          ضمن عقود موثقة تضمن لك انجاز مشروعك على اكمل وجه نحن نقدم لك
+      <div className="bg-secondary/20 py-10 px-2 md:px-20">
+        <p className="text-2xl font-header font-bold text-primary text-center px-2 md:px-0 mt-8">
+          ضمن عقود موثقة تضمن لك انجاز مشروعك على أكمل وجه
         </p>
+        <p className="text-base font-header font-bold text-secondary text-center px-2 md:px-0 mt-7 mb-12">
+          نقدم لكم الخدمات التالية بأفضل جودة وأعلى كفاءة
+        </p>
+
         <div className="grid grid-flow-row grid-cols-3 md:grid-cols-6 gap-8 md:gap-8 mt-8 ">
           {features.map((item, index) => (
             <div
@@ -156,7 +163,7 @@ const ThirdSection = () => {
           ))}
         </div>
       </div>
-      <div className="bg-slate-100 py-8 text-center space-y-6">
+      <div className="bg-primary/10 py-8 text-center space-y-6">
         <p className="text-primary text-2xl md:text-3xl font-bold font-header">
           ضمان غير محدود المدة
         </p>
@@ -173,6 +180,10 @@ const ThirdSection = () => {
             تحديثات مستمرة
           </p>
         </div>
+        <TitleAndButton
+          title="تواصل معنا الآن"
+          scrollToContact={scrollToContact}
+        />
       </div>
       <div className="px-2 md:px-20 py-10">
         <p className="text-center font-header text-2xl text-primary font-semibold">
@@ -183,10 +194,7 @@ const ThirdSection = () => {
           <div>
             <div className="grid grid-cols-2   md:grid-cols-2 gap-4 ">
               {appType.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-center p-3 my-2 border-b-2 border-gray-200"
-                >
+                <div key={index} className="flex items-center p-3 my-2 ">
                   {item.icon}
                   <p className="text-2xl text-gray-800 font-body ">
                     {item.title}
@@ -196,6 +204,9 @@ const ThirdSection = () => {
             </div>
           </div>
         </div>
+        <p className="text-center font-body text-2xl text-secondary font-semibold mt-6">
+          وجميع مجالات الأعمال الأخرى
+        </p>
       </div>
     </div>
   );

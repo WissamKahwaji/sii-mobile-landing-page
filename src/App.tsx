@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "./layouts/header";
 import { useEffect } from "react";
 import WhatsAppButton from "./components/ui/WhatsAppButton";
+import Footer from "./layouts/footer";
 
 function App() {
   const { pathname } = useLocation();
@@ -17,6 +18,7 @@ function App() {
         <Outlet />
         <WhatsAppButton number={"+971545615757"} />
       </main>
+      <Footer />
     </div>
   );
 }

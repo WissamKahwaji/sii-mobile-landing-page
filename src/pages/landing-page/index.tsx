@@ -5,6 +5,7 @@ import ThirdSection from "../../components/third-section/ThirdSection";
 import ContactSection from "../../components/contact-section/ContactSection";
 import SamplesSection from "../../components/sample-section/SamplesSection";
 import LinkSection from "../../components/link-section/LinkSection";
+import ReviewSection from "../../components/review-section/ReviewSection";
 const LandingPage = () => {
   const contactSectionRef = useRef<HTMLDivElement>(null);
 
@@ -17,11 +18,12 @@ const LandingPage = () => {
     <div>
       <FirstSection scrollToContact={scrollToContact} />
       <SecondSection />
-      <SamplesSection />
-      <ThirdSection />
+      <SamplesSection scrollToContact={scrollToContact} />
+      <ThirdSection scrollToContact={scrollToContact} />
       <div ref={contactSectionRef}>
         <ContactSection />
       </div>
+      <ReviewSection />
       <LinkSection />
     </div>
   );

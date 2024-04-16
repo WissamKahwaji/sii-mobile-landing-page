@@ -92,7 +92,7 @@ const ContactSection = () => {
       <div className="w-[98%] m-auto max-w-[1400px]">
         <div className="grid grid-cols-1 pb-8 text-center pt-4">
           <h3 className="mb-4 md:text-2xl text-xl font-bold font-header text-primary capitalize">
-            ! تواصل معنا الان
+            تواصل معنا الان !
           </h3>
           <p className="text-secondary max-w-xl mx-auto font-body  text-2xl">
             نحب أن نسمع منك! سنتواصل معك في أقرب وقت خلال 24 - 48 ساعة.
