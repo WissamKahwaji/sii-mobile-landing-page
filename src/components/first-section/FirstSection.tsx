@@ -6,7 +6,7 @@ interface FirstSectionProps {
 const FirstSection: React.FC<FirstSectionProps> = ({ scrollToContact }) => {
   return (
     <div className="flex flex-col items-center text-center bg-secondary/10 py-8 space-y-4 md:space-y-8">
-      <p className="font-bold font-header text-2xl md:text-3xl text-primary px-4">
+      <p className="font-bold font-header text-2xl md:text-3xl text-primary  px-2">
         حقق أفضل تواجد فعال مع جمهورك من خلال تطبيقك الالكتروني
       </p>
       <p className="text-gray-700 font-semibold font-body text-2xl md:text-3xl">

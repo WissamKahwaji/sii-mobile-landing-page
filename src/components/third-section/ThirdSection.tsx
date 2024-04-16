@@ -136,7 +136,7 @@ const ThirdSection = () => {
               />
 
               <div className="border-t pt-2 border-secondary">
-                <p className="text-xs md:text-base font-header text-primary font-bold">
+                <p className="text-[8.2px] md:text-base font-header text-primary font-bold">
                   {item.title}
                 </p>
               </div>
