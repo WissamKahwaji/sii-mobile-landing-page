@@ -1,14 +1,6 @@
 import { Link } from "react-router-dom";
-import {
-  FiFacebook,
-  FiInstagram,
-  FiLinkedin,
-  FiMail,
-  FiPhone,
-} from "react-icons/fi";
-import { MdWhatsapp } from "react-icons/md";
-import { FaSnapchat } from "react-icons/fa";
-import { BsTwitterX } from "react-icons/bs";
+import { FiMail, FiPhone } from "react-icons/fi";
+
 import { useEffect, useState } from "react";
 import logo_black from "../../assets/logo_black.png";
 
@@ -30,32 +22,32 @@ const Navbar = () => {
     };
   }, [prevScrollPos]); // Only prevScrollPos is needed as a dependency
 
-  const socialMediaIcons = [
-    {
-      icon: <MdWhatsapp className="h-6 w-6" />,
-      link: "https://wa.me/+971542998757",
-    },
-    {
-      icon: <FiFacebook className="h-6 w-6" />,
-      link: "https://www.facebook.com/SiiMedia.ae",
-    },
-    {
-      icon: <FiInstagram className="h-6 w-6" />,
-      link: "https://www.instagram.com/siimedia/",
-    },
-    {
-      icon: <FiLinkedin className="h-6 w-6" />,
-      link: "https://www.linkedin.com/company/sii-media",
-    },
-    {
-      icon: <FaSnapchat className="h-6 w-6" />,
-      link: "https://t.snapchat.com/O0pjBC6s",
-    },
-    {
-      icon: <BsTwitterX className="h-6 w-5" />,
-      link: "https://twitter.com/siimedia",
-    },
-  ];
+  // const socialMediaIcons = [
+  //   {
+  //     icon: <MdWhatsapp className="h-6 w-6" />,
+  //     link: "https://wa.me/+971542998757",
+  //   },
+  //   {
+  //     icon: <FiFacebook className="h-6 w-6" />,
+  //     link: "https://www.facebook.com/SiiMedia.ae",
+  //   },
+  //   {
+  //     icon: <FiInstagram className="h-6 w-6" />,
+  //     link: "https://www.instagram.com/siimedia/",
+  //   },
+  //   {
+  //     icon: <FiLinkedin className="h-6 w-6" />,
+  //     link: "https://www.linkedin.com/company/sii-media",
+  //   },
+  //   {
+  //     icon: <FaSnapchat className="h-6 w-6" />,
+  //     link: "https://t.snapchat.com/O0pjBC6s",
+  //   },
+  //   {
+  //     icon: <BsTwitterX className="h-6 w-5" />,
+  //     link: "https://twitter.com/siimedia",
+  //   },
+  // ];
 
   return (
     <header
@@ -63,7 +55,7 @@ const Navbar = () => {
         visible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <nav className="flex flex-row md:flex-row items-center justify-between px-3 md:py-2 py-2 lg:px-8 lg:py-4 md:px-16 lg:justify-between lg:items-center w-full">
+      <nav className="flex flex-row md:flex-row items-center justify-between px-3 md:py-2 py-2 lg:px-8 lg:py-4 md:px-16 lg:justify-between lg:items-end w-full">
         <div className="flex items-center justify-between w-full lg:w-auto md:w-auto lg:justify-start gap-x-8 md:space-x-0 md:justify-center">
           <div className="text-2xl md:text-4xl font-bold text-primary">
             <Link to="/">
@@ -75,8 +67,8 @@ const Navbar = () => {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col items-end justify-start">
-          <div className="flex flex-row space-x-2 mb-2">
+        <div className="flex flex-col items-end justify-start mt-1">
+          <div className="flex flex-row space-x-2 mb-3">
             <p className="text-primary font-header font-semibold">
               info@siimedia.net
             </p>
@@ -98,7 +90,7 @@ const Navbar = () => {
               <FiPhone className="h-6 w-6" />
             </Link>
           </div>
-          <div className="flex flex-row space-x-2">
+          {/* <div className="flex flex-row space-x-2">
             {socialMediaIcons.map((socialMedia, index) => (
               <Link
                 key={index}
@@ -108,7 +100,7 @@ const Navbar = () => {
                 {socialMedia.icon}
               </Link>
             ))}
-          </div>
+          </div> */}
         </div>
       </nav>
     </header>

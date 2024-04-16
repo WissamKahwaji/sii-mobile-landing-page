@@ -9,7 +9,7 @@ const TitleAndBody = (props: TitleAndBodyProps) => {
       <p className="text-2xl font-header text-primary mb-4 text-center">
         {props.title}
       </p>
-      <p className="font-body font-thin text-2xl leading-7 text-cyan-600 text-justify">
+      <p className="font-body font-thin text-2xl leading-7 text-gray-900 text-justify">
         {props.body}
       </p>
     </div>

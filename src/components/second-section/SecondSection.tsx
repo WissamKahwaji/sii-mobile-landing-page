@@ -2,15 +2,16 @@ import TitleAndBody from "../ui/TitleAndBody";
 
 const SecondSection = () => {
   return (
-    <div className=" mx-10 py-10" style={{ direction: "rtl" }}>
+    <div className=" mx-5 md:mx-10 py-10" style={{ direction: "rtl" }}>
       <div className="text-center">
-        <p className=" text-secondary font-semibold font-header text-2xl">
-          خدمات تطوير تطبيقات الهاتف المحمول المتطورة لدينا
+        <p className=" text-secondary font-semibold font-header text-base md:text-2xl leading-relaxed">
+          دعنا نساعدك في تحقيق أقصى امكانيات نجاح لعلامتك التجارية.. اختر تطبيقك
+          الآن من انواع التطبيقات التالية
         </p>
-        <p className="text-gray-500  font-body mt-2 text-lg ">
+        {/* <p className="text-gray-500  font-body mt-2 text-lg ">
           نساعد رواد الأعمال على تنفيذ أفكارهم الإبداعية وتحويلها إلى تطبيقات
           جوال احترافية لكل من أنظمة أندرويد و ios‼️..
-        </p>
+        </p> */}
       </div>
       <div className="grid grid-flow-row grid-cols-1 md:grid-cols-3 mt-12 gap-y-8 md:gap-y-0">
         <TitleAndBody
