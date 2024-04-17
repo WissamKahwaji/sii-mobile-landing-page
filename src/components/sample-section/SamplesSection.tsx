@@ -42,7 +42,7 @@ const SamplesSection: React.FC<SamplesSectionProps> = ({ scrollToContact }) => {
   };
   return (
     <div className="bg-seconBackground px-3 text-center py-8">
-      <p className="text-secondary font-body font-semibold text-2xl md:text-4xl">
+      <p className="text-secondary font-header font-semibold text-base md:text-2xl">
         من خلال تطبيقك الالكتروني انشأ قناتك التسويقية الخاصة وحقق أفضل الأرباح
       </p>
       <Carousel
@@ -61,9 +61,11 @@ const SamplesSection: React.FC<SamplesSectionProps> = ({ scrollToContact }) => {
           </div>
         ))}
       </Carousel>
-      <p className="font-body text-2xl md:text-4xl text-primary my-3 md:my-6">
-        انضم إلى عالم الاعمال المبتكر والمميز مع تطبيقاتنا الفريدة والعصرية
-      </p>
+      <div className="p-4 w-fit bg-primary md:mx-auto mt-4 mb-6 mx-4 rounded-sm">
+        <p className="font-header text-lg md:text-2xl text-white my-3 md:my-6 animate-pulse">
+          انضم إلى عالم الاعمال المبتكر والمميز مع تطبيقاتنا الفريدة والعصرية
+        </p>
+      </div>
       <TitleAndButton
         title="احصل على تطبيقك الخاص"
         scrollToContact={scrollToContact}

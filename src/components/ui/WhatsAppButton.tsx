@@ -35,7 +35,7 @@ const WhatsAppButton = (props: Props) => {
         scale: showWhatsAppButton ? 1 : 0,
       }}
       transition={{ duration: 0.3 }}
-      className={`fixed bottom-12 right-3 h-14 w-14 rounded-full bg-secondary text-white flex items-center justify-center ${
+      className={`fixed bottom-28 right-3 h-14 w-14 rounded-full bg-secondary text-white flex items-center justify-center ${
         showWhatsAppButton ? "block" : "hidden"
       }`}
       onClick={openWhatsApp}

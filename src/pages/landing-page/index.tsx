@@ -20,10 +20,11 @@ const LandingPage = () => {
       <SecondSection />
       <SamplesSection scrollToContact={scrollToContact} />
       <ThirdSection scrollToContact={scrollToContact} />
+      <ReviewSection />
       <div ref={contactSectionRef}>
         <ContactSection />
       </div>
-      <ReviewSection />
+
       <LinkSection />
     </div>
   );

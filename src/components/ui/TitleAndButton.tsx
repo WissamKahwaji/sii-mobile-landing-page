@@ -36,7 +36,7 @@ const TitleAndButton: React.FC<TitleAndButtonProps> = ({
 
   return (
     <motion.div
-      className="font-header uppercase py-3 px-6 rounded text-gray-900 shadow-lg drop-shadow bg-third border border-black w-fit flex flex-row justify-center items-center mx-auto cursor-pointer delay-100 animate-pulse "
+      className="font-header uppercase py-3 px-6 rounded text-gray-900 shadow-lg drop-shadow bg-third border border-black w-fit flex flex-row justify-center items-center mx-auto cursor-pointer delay-100 animate-wiggle "
       variants={buttonVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}

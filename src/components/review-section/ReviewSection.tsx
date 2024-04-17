@@ -16,12 +16,12 @@ const ReviewSection = () => {
         "لقد ساعدتنا Sii Media على تحسين إستراتيجية تحقيق الدخل من التطبيقات لدينا من خلال حلولها المبتكرة. لقد قدموا رؤى قيمة ونفذوا استراتيجيات أدت إلى زيادة تدفقات إيراداتنا بشكل كبير. خبرتهم في هذا المجال لا مثيل لها. ونحن نتطلع إلى استكشاف المزيد من الفرص معًا.",
       author: "نت زوون",
     },
-    {
-      id: 3,
-      content:
-        "تقدم Sii Media باستمرار محتوى عالي الجودة يلقى صدى لدى جمهورنا. فريقهم استباقي ومبدع ويفهم صوت علامتنا التجارية بشكل مثالي. إنه لمن المنعش العمل مع مثل هذا الشريك المحترف والموثوق. نتطلع إلى مواصلة تعاوننا!",
-      author: "باي رونا",
-    },
+    // {
+    //   id: 3,
+    //   content:
+    //     "تقدم Sii Media باستمرار محتوى عالي الجودة يلقى صدى لدى جمهورنا. فريقهم استباقي ومبدع ويفهم صوت علامتنا التجارية بشكل مثالي. إنه لمن المنعش العمل مع مثل هذا الشريك المحترف والموثوق. نتطلع إلى مواصلة تعاوننا!",
+    //   author: "باي رونا",
+    // },
     {
       id: 4,
       content:
@@ -54,7 +54,7 @@ const ReviewSection = () => {
 
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white z-2 w-3/4 mx-auto">
         <p className="font-header font-bold text-2xl md:text-3xl text-third text-center mb-2 md:mt-4">
-          آراء عملاءنا
+          بعض آراء عملائنا
         </p>
         <p className="font-header font-semibold text-xs md:text-lg text-center mb-5 text-gray-300">
           اكتشف ما يقوله عملاؤنا عن تجاربهم معنا من خلال تقييمات العملاء الثاقبة
@@ -74,7 +74,7 @@ const ReviewSection = () => {
                 {review.author}
               </p>
               <p
-                className="mt-4 md:mt-4 text-base md:text-2xl lg:mt-4 lg:text-4xl font-body "
+                className="mt-4 md:mt-4 text-xs md:text-2xl lg:mt-4 lg:text-2xl font-header leading-5"
                 style={{ direction: "rtl" }}
               >
                 {review.content}

@@ -34,6 +34,9 @@ const Footer = () => {
 
   return (
     <div className="bg-gradient-to-r from-secondary/80 to-secondary/20 text-center pt-3 pb-3 px-2 space-y-3">
+      <p className="font-header font-bold text-primary text-2xl mt-4 md:mt-8 mb-8">
+        تفضلوا بزيارتنا أو التواصل عبر وسائل التواصل الإجتماعي
+      </p>
       <div className="flex flex-row space-x-4 items-center justify-center">
         {socialMediaIcons.map((socialMedia, index) => (
           <Link
@@ -46,9 +49,6 @@ const Footer = () => {
         ))}
       </div>
       <div className="">
-        <p className="font-header font-bold text-primary text-2xl mt-4 md:mt-8">
-          تفضلوا بزيارتنا
-        </p>
         <p className="font-body text-lg md:text-2xl text-gray-700 my-2">
           Dubai- Businesses Bay- Opal Tower- office 1608
         </p>

@@ -86,6 +86,7 @@ const ContactSection = () => {
   };
   return (
     <div
+      id="contactUs"
       className="py-1 md:p-16 w-full bg-secondary/20"
       style={{ direction: "rtl" }}
     >
@@ -94,10 +95,10 @@ const ContactSection = () => {
           <h3 className="mb-4 md:text-2xl text-xl font-bold font-header text-primary capitalize">
             تواصل معنا الان !
           </h3>
-          <p className="text-secondary max-w-xl mx-auto font-body  text-2xl">
+          <p className="text-secondary max-w-xl mx-auto font-header  text-base md:text-lg">
             نحب أن نسمع منك! سنتواصل معك في أقرب وقت خلال 24 - 48 ساعة.
           </p>
-          <p className="text-gray-500 mt-2 font-body text-lg">
+          <p className="text-gray-500 mt-2 font-header text-sm md:text-lg">
             اتخذ قرار التغيير و تواصل مع فريق سيي ميديا الاحترافي
           </p>
         </div>
@@ -199,7 +200,7 @@ const ContactSection = () => {
                 type="submit"
                 className="bg-third border border-black w-full text-white py-3 px-5 rounded-md hover:bg-primary transition-colors duration-300 delay-100 animate-pulse"
               >
-                أرسل الرسالة
+                أرسل رسالة واحصل على العرض
               </button>
             </form>
           </div>

@@ -176,7 +176,7 @@ const ThirdSection: React.FC<ThirdSectionProps> = ({ scrollToContact }) => {
             </motion.div>
           ))}
         </div>
-        <p className="text-lg md:text-3xl font-light font-body text-gray-600 mt-6 md:mt-12 text-center px-4">
+        <p className="text-lg md:text-lg font-light font-header text-gray-600 mt-6 md:mt-12 text-center px-4">
           تصميم وتطوير تطبيقات مبتكرة مع خبراءنا المحترفين من شركة سيي ميديا
         </p>
       </div>
@@ -198,12 +198,12 @@ const ThirdSection: React.FC<ThirdSectionProps> = ({ scrollToContact }) => {
             تحديثات مستمرة
           </p>
         </div>
-        <p className="font-body text-gray-600 px-5 text-justify md:px-12 text-2xl md:text-3xl">
+        <p className="font-header text-gray-600 px-5 text-justify md:px-16 text-base md:text-lg">
           أطلق عنان إبداعك مع خدمتنا لإنشاء تطبيقات الهاتف المبتكرة! سواء كنت
           تبحث عن توسيع نطاق عملك أو تحسين تجربة عملائك، فإن تطبيقات الهاتف التي
           نقدمها توفر الحلول المثالية. فريقنا المتخصص في التطوير يعمل بجد لتحقيق
           رؤيتك بأفضل الطرق التقنية والجمالية. ابدأ الآن واجعل فكرتك تلمع على
-          شاشات الهواتف الذكية مع ويسي بكسل!
+          شاشات الهواتف الذكية مع سيي ميديا!
         </p>
         <TitleAndButton
           title="تواصل معنا الآن"
@@ -215,9 +215,11 @@ const ThirdSection: React.FC<ThirdSectionProps> = ({ scrollToContact }) => {
         <p className="text-center font-header text-2xl text-primary font-semibold">
           نقوم بإنشاء تطبيقات بأي فكرة تخطر ببالك
         </p>
-        <p className="text-center font-body text-lg md:text-2xl text-third font-light mt-2 md:mt-4">
-          من الفكرة إلى التطبيق نحن شركاءك في رحلة التطوير والنجاح
-        </p>
+        <div className="p-4 bg-primary rounded-sm mt-3 mx-5 md:mx-auto md:w-fit">
+          <p className="text-center font-header font-semibold text-base md:text-base text-white">
+            من الفكرة إلى التطبيق نحن شركاءك في رحلة التطوير والنجاح
+          </p>
+        </div>
         <div className="mt-14 grid grid-flow-row grid-cols-1 md:grid-cols-2 space-x-4">
           <img src={image2} alt="mobile" />
           <div>
@@ -231,7 +233,7 @@ const ThirdSection: React.FC<ThirdSectionProps> = ({ scrollToContact }) => {
                   animate={appTypeInView ? "visible" : "hidden"}
                 >
                   {item.icon}
-                  <p className="text-2xl text-gray-800 font-body">
+                  <p className="text-sm md:text-lg text-gray-800 font-header">
                     {item.title}
                   </p>
                 </motion.div>
@@ -239,7 +241,7 @@ const ThirdSection: React.FC<ThirdSectionProps> = ({ scrollToContact }) => {
             </div>
           </div>
         </div>
-        <p className="text-center font-body text-2xl text-secondary font-semibold mt-6">
+        <p className="text-center font-header text-base md:text-2xl text-secondary font-semibold mt-6">
           وجميع مجالات الأعمال الأخرى
         </p>
       </div>

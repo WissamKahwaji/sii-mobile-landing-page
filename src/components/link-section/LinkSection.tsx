@@ -9,16 +9,18 @@ const LinkSection = () => {
           href="https://www.packages.siimedia.net/"
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center justify-center bg-transparent border border-primary text-primary font-semibold px-6 py-3 rounded-lg hover:bg-primary-dark hover:border-primary transform transition duration-300 hover:scale-105 delay-100 animate-pulse"
+          className="flex items-center justify-center bg-transparent border border-primary text-primary font-semibold px-6 py-3 rounded-lg hover:bg-primary-dark hover:border-primary transform transition duration-300 hover:scale-105  animate-shake"
         >
           <span className="mr-2">اكتشف خدماتنا الأخرى</span>
           <img src={linkIcon} alt="link" className="w-5 h-6" />
         </a>
       </div>
-      <p className="text-sm md:text-2xl font-header font-bold">
-        اكتشف المزيد من خدماتنا اللا محدودة بأفضل العروض وأعلى جوده مع شركة سي
-        ميديا
-      </p>
+      <div className="bg-gradient-to-r from-gray-900 to-gray-700 p-4">
+        <p className="text-sm md:text-2xl font-header font-bold text-white ">
+          اكتشف المزيد من خدماتنا اللا محدودة بأفضل العروض وأعلى جوده مع شركة سي
+          ميديا
+        </p>
+      </div>
     </div>
   );
 };

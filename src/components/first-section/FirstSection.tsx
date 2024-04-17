@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import Lottie from "lottie-react";
-import animyIcon from "../../assets/animated-icons/request-icon2.json";
+import animyIcon from "../../assets/animated-icons/request-icon3.json";
 
 interface FirstSectionProps {
   scrollToContact: (event: React.MouseEvent<HTMLDivElement>) => void;
@@ -40,7 +40,7 @@ const FirstSection: React.FC<FirstSectionProps> = ({ scrollToContact }) => {
         <p className="font-bold font-header text-2xl md:text-3xl text-primary px-2">
           حقق أفضل تواجد فعال مع جمهورك من خلال تطبيقك الالكتروني
         </p>
-        <p className="text-gray-700 font-semibold font-body text-2xl md:text-3xl mt-3">
+        <p className="text-gray-700 font-semibold font-header text-base md:text-lg mt-3">
           حول أفكارك إلى تطبيق مع فريق سيي ميديا
         </p>
         <motion.div
@@ -53,12 +53,14 @@ const FirstSection: React.FC<FirstSectionProps> = ({ scrollToContact }) => {
           whileHover="hover"
         >
           <Lottie animationData={animyIcon} className="h-52 w-60" />
-          <p className="text-primary font-header font-semibold text-lg md:text-2xl ">
-            بدك تختصر الطريق؟ بدك أفضل تطبيق؟
-          </p>
-          <p className="text-primary font-header font-semibold text-lg md:text-2xl ">
-            تواصل معنا الآن
-          </p>
+          <div className="p-4 bg-primary rounded-md animate-shake ">
+            <p className="text-white font-header font-bold text-lg md:text-2xl ">
+              بدك تختصر الطريق؟ بدك أفضل تطبيق؟
+            </p>
+            <p className="text-white font-header font-bold text-lg md:text-2xl ">
+              تواصل معنا الآن
+            </p>
+          </div>
         </motion.div>
       </motion.div>
     </div>
