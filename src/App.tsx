@@ -16,7 +16,7 @@ function App() {
 
       <main className="mt-[89px] md:mt-[97px] lg:mt-[117px] ">
         <Outlet />
-        <WhatsAppButton number={"+971545615757"} />
+        <WhatsAppButton number={"+971542998757"} />
       </main>
       <Footer />
     </div>

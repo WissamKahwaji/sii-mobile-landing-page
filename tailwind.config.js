@@ -12,6 +12,7 @@ export default {
         secondary: "hsl(var(--secondary))",
         background: "hsl(var(--background))",
         seconBackground: "hsl(var(--seconBackground))",
+        third: "hsl(var(--third))",
       },
     },
   },

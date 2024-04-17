@@ -45,10 +45,19 @@ const Footer = () => {
           </Link>
         ))}
       </div>
-      <p className="text-sm md:text-2xl font-header font-bold">
-        اكتشف المزيد من خدماتنا اللا محدودة بافضل العروض واعلى جوده مع شركة سي
-        ميديا
-      </p>
+      <div className="">
+        <p className="font-header font-bold text-primary text-2xl mt-4 md:mt-8">
+          تفضلوا بزيارتنا
+        </p>
+        <p className="font-body text-lg md:text-2xl text-gray-700 my-2">
+          Dubai- Businesses Bay- Opal Tower- office 1608
+        </p>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14441.802897644364!2d55.288398869188605!3d25.188018192405522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f6831f6693c85%3A0xb5b269f7897f4978!2zT3BhbCBUb3dlciAtINin2YTYrtmE2YrYrCDYp9mE2KrYrNin2LHZiiAtINiv2KjZig!5e0!3m2!1sar!2sae!4v1709622847553!5m2!1sar!2sae"
+          className="w-full md:w-3/4 mx-auto h-[350px] md:h-[470px]"
+          loading="lazy"
+        ></iframe>
+      </div>
     </div>
   );
 };

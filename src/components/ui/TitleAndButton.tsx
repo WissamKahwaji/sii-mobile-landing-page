@@ -1,5 +1,9 @@
 import React from "react";
-import requestIcon from "../../assets/icons/request-for-proposal.png";
+import { motion } from "framer-motion";
+// import requestIcon from "../../assets/icons/request-for-proposal.png";
+import requestClickIcon from "../../assets/animated-icons/click-request.json";
+import { useInView } from "react-intersection-observer";
+import Lottie from "lottie-react";
 
 type TitleAndButtonProps = {
   title: string;
@@ -10,17 +14,42 @@ const TitleAndButton: React.FC<TitleAndButtonProps> = ({
   title,
   scrollToContact,
 }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.6,
+  });
+
+  const buttonVariants = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
-    <div
-      className="font-header uppercase duration-500 hover:bg-secondary/80 py-3 px-6 rounded text-white shadow-lg drop-shadow bg-primary w-fit flex flex-row justify-center items-center mx-auto cursor-pointer"
+    <motion.div
+      className="font-header uppercase py-3 px-6 rounded text-gray-900 shadow-lg drop-shadow bg-third border border-black w-fit flex flex-row justify-center items-center mx-auto cursor-pointer delay-100 animate-pulse "
+      variants={buttonVariants}
+      initial="hidden"
+      animate={inView ? "visible" : "hidden"}
+      ref={ref}
       onClick={e => {
         e.preventDefault();
         scrollToContact(e);
       }}
     >
-      <img src={requestIcon} alt={title} className="w-10 h-10" />
+      {/* <img src={requestIcon} alt={title} className="w-10 h-10 mr-2" /> */}
+      <Lottie animationData={requestClickIcon} className="w-14 h-14 mr-2" />
       {title}
-    </div>
+    </motion.div>
   );
 };
 

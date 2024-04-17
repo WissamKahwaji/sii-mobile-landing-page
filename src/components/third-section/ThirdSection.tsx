@@ -1,4 +1,6 @@
-import image2 from "../../assets/image3.png";
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import MedicalServicesIcon from "@mui/icons-material/MedicalServices";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import SchoolIcon from "@mui/icons-material/School";
@@ -9,6 +11,7 @@ import LocalMallRoundedIcon from "@mui/icons-material/LocalMallRounded";
 import RestaurantMenuRoundedIcon from "@mui/icons-material/RestaurantMenuRounded";
 import HomeWorkRoundedIcon from "@mui/icons-material/HomeWorkRounded";
 import LocationCityRoundedIcon from "@mui/icons-material/LocationCityRounded";
+import TitleAndButton from "../ui/TitleAndButton";
 import programming from "../../assets/icons/programming.png";
 import conding from "../../assets/icons/coding.png";
 import folder from "../../assets/icons/folder.png";
@@ -22,54 +25,66 @@ import credit from "../../assets/icons/credit-card.png";
 import tools from "../../assets/icons/tools.png";
 import training from "../../assets/icons/training.png";
 import dailyIcon from "../../assets/icons/24-hours-support.png";
-import TitleAndButton from "../ui/TitleAndButton";
+import image2 from "../../assets/image3.png";
+
 interface ThirdSectionProps {
   scrollToContact: (event: React.MouseEvent<HTMLDivElement>) => void;
 }
+
 const ThirdSection: React.FC<ThirdSectionProps> = ({ scrollToContact }) => {
+  const { ref: featuresRef, inView: featuresInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.6,
+  });
+
+  const { ref: appTypeRef, inView: appTypeInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.6,
+  });
+
   const appType = [
     {
       title: "المراكز طبية",
-      icon: <MedicalServicesIcon className="w-6 h-6 mx-2 text-primary" />,
+      icon: <MedicalServicesIcon className="w-6 h-6 mx-2 text-third" />,
     },
     {
       title: "تجارة إلكترونية",
-      icon: <AddShoppingCartIcon className="w-6 h-6 mx-2 text-primary" />,
+      icon: <AddShoppingCartIcon className="w-6 h-6 mx-2 text-third" />,
     },
     {
       title: "المراكز التعليمية",
-      icon: <SchoolIcon className="w-6 h-6 mx-2 text-primary" />,
+      icon: <SchoolIcon className="w-6 h-6 mx-2 text-third" />,
     },
     {
       title: "الشحن والتوصيل",
-      icon: <LocalShippingIcon className="w-6 h-6 mx-2 text-primary" />,
+      icon: <LocalShippingIcon className="w-6 h-6 mx-2 text-third" />,
     },
     {
       title: "الشركات العقارية",
-      icon: <ApartmentIcon className="w-6 h-6 mx-2 text-primary" />,
+      icon: <ApartmentIcon className="w-6 h-6 mx-2 text-third" />,
     },
     {
       title: "تأجير السيارات",
-      icon: <CarRentalRoundedIcon className="w-6 h-6 mx-2 text-primary" />,
+      icon: <CarRentalRoundedIcon className="w-6 h-6 mx-2 text-third" />,
     },
     {
       title: "المراكز التجارية",
-      icon: <LocalMallRoundedIcon className="w-6 h-6 mx-2 text-primary" />,
+      icon: <LocalMallRoundedIcon className="w-6 h-6 mx-2 text-third" />,
     },
     {
       title: "المطاعم",
-      icon: <RestaurantMenuRoundedIcon className="w-6 h-6 mx-2 text-primary" />,
+      icon: <RestaurantMenuRoundedIcon className="w-6 h-6 mx-2 text-third" />,
     },
     {
       title: "خدمات منزلية",
-      icon: <HomeWorkRoundedIcon className="w-6 h-6 mx-2 text-primary" />,
+      icon: <HomeWorkRoundedIcon className="w-6 h-6 mx-2 text-third" />,
     },
-
     {
       title: "شركات التأمين",
-      icon: <LocationCityRoundedIcon className="w-6 h-6 mx-2 text-primary" />,
+      icon: <LocationCityRoundedIcon className="w-6 h-6 mx-2 text-third" />,
     },
   ];
+
   const features = [
     {
       title: "كود نظيف 100%",
@@ -120,8 +135,14 @@ const ThirdSection: React.FC<ThirdSectionProps> = ({ scrollToContact }) => {
       icon: training,
     },
   ];
+
+  const itemVariants = {
+    hidden: { opacity: 0, x: -40 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+  };
+
   return (
-    <div className="bg-slate-50 " style={{ direction: "rtl" }}>
+    <div className="bg-slate-50" style={{ direction: "rtl" }}>
       <div className="bg-secondary/20 py-10 px-2 md:px-20">
         <p className="text-2xl font-header font-bold text-primary text-center px-2 md:px-0 mt-8">
           ضمن عقود موثقة تضمن لك انجاز مشروعك على أكمل وجه
@@ -130,39 +151,36 @@ const ThirdSection: React.FC<ThirdSectionProps> = ({ scrollToContact }) => {
           نقدم لكم الخدمات التالية بأفضل جودة وأعلى كفاءة
         </p>
 
-        <div className="grid grid-flow-row grid-cols-3 md:grid-cols-6 gap-8 md:gap-8 mt-8 ">
+        <div
+          className="grid grid-flow-row grid-cols-3 md:grid-cols-6 gap-8 md:gap-8 mt-8"
+          ref={featuresRef}
+        >
           {features.map((item, index) => (
-            <div
+            <motion.div
               key={index}
               className="flex flex-col justify-center items-center space-y-2"
+              variants={itemVariants}
+              initial="hidden"
+              animate={featuresInView ? "visible" : "hidden"}
             >
               <img
                 src={item.icon}
                 alt={item.title}
                 className="w-8 h-8 md:w-10 md:h-10 text-primary"
               />
-
-              <div className="border-t pt-2 border-secondary">
+              <div className="border-t pt-2 border-third">
                 <p className="text-[8.2px] md:text-base font-header text-primary font-bold">
                   {item.title}
                 </p>
               </div>
-            </div>
-            // <div className="flex flex-row items-center justify-center p-2 rounded shadow-md shadow-secondary/15">
-            //   {/* <svg
-            //     viewBox="0 0 665.8 1000"
-            //     fill="currentColor"
-            //     height="1em"
-            //     width="1em"
-            //     className="shrink-0 h-5 w-5 fill-current text-green-500"
-            //   >
-            //     <path d="M248 850c-22.667 0-41.333-9.333-56-28L12 586C1.333 570-2.667 552.667 0 534s11.333-34 26-46 31.667-16.667 51-14c19.333 2.667 35 12 47 28l118 154 296-474c10.667-16 25-26 43-30s35.667-1.333 53 8c16 10.667 26 25 30 43s1.333 35.667-8 53L306 816c-13.333 21.333-32 32-56 32l-2 2" />
-            //   </svg>{" "} */}
-            //   <p className="font-body text-2xl text-gray-700">{item}</p>
-            // </div>
+            </motion.div>
           ))}
         </div>
+        <p className="text-lg md:text-3xl font-light font-body text-gray-600 mt-6 md:mt-12 text-center px-4">
+          تصميم وتطوير تطبيقات مبتكرة مع خبراءنا المحترفين من شركة سيي ميديا
+        </p>
       </div>
+
       <div className="bg-primary/10 py-8 text-center space-y-6">
         <p className="text-primary text-2xl md:text-3xl font-bold font-header">
           ضمان غير محدود المدة
@@ -180,26 +198,43 @@ const ThirdSection: React.FC<ThirdSectionProps> = ({ scrollToContact }) => {
             تحديثات مستمرة
           </p>
         </div>
+        <p className="font-body text-gray-600 px-5 text-justify md:px-12 text-2xl md:text-3xl">
+          أطلق عنان إبداعك مع خدمتنا لإنشاء تطبيقات الهاتف المبتكرة! سواء كنت
+          تبحث عن توسيع نطاق عملك أو تحسين تجربة عملائك، فإن تطبيقات الهاتف التي
+          نقدمها توفر الحلول المثالية. فريقنا المتخصص في التطوير يعمل بجد لتحقيق
+          رؤيتك بأفضل الطرق التقنية والجمالية. ابدأ الآن واجعل فكرتك تلمع على
+          شاشات الهواتف الذكية مع ويسي بكسل!
+        </p>
         <TitleAndButton
           title="تواصل معنا الآن"
           scrollToContact={scrollToContact}
         />
       </div>
-      <div className="px-2 md:px-20 py-10">
+
+      <div className="px-2 md:px-20 py-10" ref={appTypeRef}>
         <p className="text-center font-header text-2xl text-primary font-semibold">
           نقوم بإنشاء تطبيقات بأي فكرة تخطر ببالك
         </p>
-        <div className="mt-14  grid grid-flow-row grid-cols-1 md:grid-cols-2 space-x-4">
+        <p className="text-center font-body text-lg md:text-2xl text-third font-light mt-2 md:mt-4">
+          من الفكرة إلى التطبيق نحن شركاءك في رحلة التطوير والنجاح
+        </p>
+        <div className="mt-14 grid grid-flow-row grid-cols-1 md:grid-cols-2 space-x-4">
           <img src={image2} alt="mobile" />
           <div>
-            <div className="grid grid-cols-2   md:grid-cols-2 gap-4 ">
+            <div className="grid grid-cols-2 md:grid-cols-2 gap-4 ">
               {appType.map((item, index) => (
-                <div key={index} className="flex items-center p-3 my-2 ">
+                <motion.div
+                  key={index}
+                  className="flex items-center p-3 my-2"
+                  variants={itemVariants}
+                  initial="hidden"
+                  animate={appTypeInView ? "visible" : "hidden"}
+                >
                   {item.icon}
-                  <p className="text-2xl text-gray-800 font-body ">
+                  <p className="text-2xl text-gray-800 font-body">
                     {item.title}
                   </p>
-                </div>
+                </motion.div>
               ))}
             </div>
           </div>

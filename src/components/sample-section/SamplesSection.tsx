@@ -61,6 +61,9 @@ const SamplesSection: React.FC<SamplesSectionProps> = ({ scrollToContact }) => {
           </div>
         ))}
       </Carousel>
+      <p className="font-body text-2xl md:text-4xl text-primary my-3 md:my-6">
+        انضم إلى عالم الاعمال المبتكر والمميز مع تطبيقاتنا الفريدة والعصرية
+      </p>
       <TitleAndButton
         title="احصل على تطبيقك الخاص"
         scrollToContact={scrollToContact}

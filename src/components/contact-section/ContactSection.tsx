@@ -197,7 +197,7 @@ const ContactSection = () => {
               </div>
               <button
                 type="submit"
-                className="bg-secondary w-full text-white py-3 px-5 rounded-md hover:bg-primary transition-colors duration-300"
+                className="bg-third border border-black w-full text-white py-3 px-5 rounded-md hover:bg-primary transition-colors duration-300 delay-100 animate-pulse"
               >
                 أرسل الرسالة
               </button>
