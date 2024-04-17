@@ -164,7 +164,7 @@ const ContactSection = () => {
                   country={"ae"}
                   value={formData.mobile}
                   onChange={handlePhoneChange}
-                  inputProps={{ required: true, autoFocus: true }}
+                  inputProps={{ required: true, autoFocus: false }}
                   placeholder="رقم الجوال"
                   inputStyle={{
                     width: "100%",
