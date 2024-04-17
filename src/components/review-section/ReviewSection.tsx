@@ -53,7 +53,7 @@ const ReviewSection = () => {
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-primary/80 to-purple-400 z-1"></div>
 
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white z-2 w-3/4 mx-auto">
-        <p className="font-header font-bold text-2xl md:text-3xl text-third text-center mb-2 md:mt-4">
+        <p className="font-header font-bold text-2xl md:text-3xl text-primary text-center mb-2 md:mt-4">
           بعض آراء عملائنا
         </p>
         <p className="font-header font-semibold text-xs md:text-lg text-center mb-5 text-gray-300">

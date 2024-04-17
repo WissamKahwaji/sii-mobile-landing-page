@@ -34,7 +34,7 @@ const Footer = () => {
 
   return (
     <div className="bg-gradient-to-r from-secondary/80 to-secondary/20 text-center pt-3 pb-3 px-2 space-y-3">
-      <p className="font-header font-bold text-primary text-2xl mt-4 md:mt-8 mb-8">
+      <p className="font-header font-bold text-primary text-sm md:text-lg mt-4 md:mt-8 mb-8">
         تفضلوا بزيارتنا أو التواصل عبر وسائل التواصل الإجتماعي
       </p>
       <div className="flex flex-row space-x-4 items-center justify-center">

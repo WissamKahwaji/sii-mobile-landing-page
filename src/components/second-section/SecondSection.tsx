@@ -1,7 +1,12 @@
 import { motion } from "framer-motion";
 import TitleAndBody from "../ui/TitleAndBody";
+import vedio from "../../assets/vedio.mp4";
+import TitleAndButton from "../ui/TitleAndButton";
 
-const SecondSection = () => {
+interface SecondSectionProps {
+  scrollToContact: (event: React.MouseEvent<HTMLDivElement>) => void;
+}
+const SecondSection: React.FC<SecondSectionProps> = ({ scrollToContact }) => {
   const containerVariants = {
     hidden: {
       opacity: 0,
@@ -47,6 +52,20 @@ const SecondSection = () => {
           الآن من انواع التطبيقات التالية
         </motion.p>
       </div>
+      <div className="my-8 ">
+        <video
+          controls
+          className="max-w-full md:h-[450px] mx-auto"
+          src={vedio}
+          typeof="video/mp4"
+          muted
+          autoPlay
+        ></video>
+      </div>
+      <TitleAndButton
+        title="اطلب تطبيقك الآن"
+        scrollToContact={scrollToContact}
+      />
       <div className="grid grid-flow-row grid-cols-1 md:grid-cols-3 mt-12 gap-y-8 md:gap-y-0">
         <motion.div variants={itemVariants}>
           <TitleAndBody

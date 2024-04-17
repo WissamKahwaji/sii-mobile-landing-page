@@ -42,6 +42,9 @@ const SamplesSection: React.FC<SamplesSectionProps> = ({ scrollToContact }) => {
   };
   return (
     <div className="bg-seconBackground px-3 text-center py-8">
+      <p className="text-2xl md:text-3xl font-header font-bold text-primary text-center mb-5">
+        بعض من أعمالنا
+      </p>
       <p className="text-secondary font-header font-semibold text-base md:text-2xl">
         من خلال تطبيقك الالكتروني انشأ قناتك التسويقية الخاصة وحقق أفضل الأرباح
       </p>

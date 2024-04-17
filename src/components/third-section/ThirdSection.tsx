@@ -39,49 +39,49 @@ const ThirdSection: React.FC<ThirdSectionProps> = ({ scrollToContact }) => {
 
   const { ref: appTypeRef, inView: appTypeInView } = useInView({
     triggerOnce: true,
-    threshold: 0.6,
+    threshold: 0.3,
   });
 
   const appType = [
     {
       title: "المراكز طبية",
-      icon: <MedicalServicesIcon className="w-6 h-6 mx-2 text-third" />,
+      icon: <MedicalServicesIcon className="w-6 h-6 mx-2 text-primary" />,
     },
     {
       title: "تجارة إلكترونية",
-      icon: <AddShoppingCartIcon className="w-6 h-6 mx-2 text-third" />,
+      icon: <AddShoppingCartIcon className="w-6 h-6 mx-2 text-primary" />,
     },
     {
       title: "المراكز التعليمية",
-      icon: <SchoolIcon className="w-6 h-6 mx-2 text-third" />,
+      icon: <SchoolIcon className="w-6 h-6 mx-2 text-primary" />,
     },
     {
       title: "الشحن والتوصيل",
-      icon: <LocalShippingIcon className="w-6 h-6 mx-2 text-third" />,
+      icon: <LocalShippingIcon className="w-6 h-6 mx-2 text-primary" />,
     },
     {
       title: "الشركات العقارية",
-      icon: <ApartmentIcon className="w-6 h-6 mx-2 text-third" />,
+      icon: <ApartmentIcon className="w-6 h-6 mx-2 text-primary" />,
     },
     {
       title: "تأجير السيارات",
-      icon: <CarRentalRoundedIcon className="w-6 h-6 mx-2 text-third" />,
+      icon: <CarRentalRoundedIcon className="w-6 h-6 mx-2 text-primary" />,
     },
     {
       title: "المراكز التجارية",
-      icon: <LocalMallRoundedIcon className="w-6 h-6 mx-2 text-third" />,
+      icon: <LocalMallRoundedIcon className="w-6 h-6 mx-2 text-primary" />,
     },
     {
       title: "المطاعم",
-      icon: <RestaurantMenuRoundedIcon className="w-6 h-6 mx-2 text-third" />,
+      icon: <RestaurantMenuRoundedIcon className="w-6 h-6 mx-2 text-primary" />,
     },
     {
       title: "خدمات منزلية",
-      icon: <HomeWorkRoundedIcon className="w-6 h-6 mx-2 text-third" />,
+      icon: <HomeWorkRoundedIcon className="w-6 h-6 mx-2 text-primary" />,
     },
     {
       title: "شركات التأمين",
-      icon: <LocationCityRoundedIcon className="w-6 h-6 mx-2 text-third" />,
+      icon: <LocationCityRoundedIcon className="w-6 h-6 mx-2 text-primary" />,
     },
   ];
 
@@ -143,7 +143,7 @@ const ThirdSection: React.FC<ThirdSectionProps> = ({ scrollToContact }) => {
 
   return (
     <div className="bg-slate-50" style={{ direction: "rtl" }}>
-      <div className="bg-secondary/20 py-10 px-2 md:px-20">
+      <div className="bg-secondary/10 py-10 px-2 md:px-20">
         <p className="text-2xl font-header font-bold text-primary text-center px-2 md:px-0 mt-8">
           ضمن عقود موثقة تضمن لك انجاز مشروعك على أكمل وجه
         </p>
@@ -168,7 +168,7 @@ const ThirdSection: React.FC<ThirdSectionProps> = ({ scrollToContact }) => {
                 alt={item.title}
                 className="w-8 h-8 md:w-10 md:h-10 text-primary"
               />
-              <div className="border-t pt-2 border-third">
+              <div className="border-t pt-2 border-secondary">
                 <p className="text-[8.2px] md:text-base font-header text-primary font-bold">
                   {item.title}
                 </p>
