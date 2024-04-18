@@ -25,7 +25,7 @@ import credit from "../../assets/icons/credit-card.png";
 import tools from "../../assets/icons/tools.png";
 import training from "../../assets/icons/training.png";
 import dailyIcon from "../../assets/icons/24-hours-support.png";
-import image2 from "../../assets/image3.png";
+import image2 from "../../assets/image3 new.png";
 
 interface ThirdSectionProps {
   scrollToContact: (event: React.MouseEvent<HTMLDivElement>) => void;
@@ -176,8 +176,9 @@ const ThirdSection: React.FC<ThirdSectionProps> = ({ scrollToContact }) => {
             </motion.div>
           ))}
         </div>
-        <p className="text-lg md:text-lg font-light font-header text-gray-600 mt-6 md:mt-12 text-center px-4">
-          تصميم وتطوير تطبيقات مبتكرة مع خبراءنا المحترفين من شركة سيي ميديا
+        <p className="text-lg md:text-lg font-header  text-gray-600 mt-6 md:mt-12 text-center px-4">
+          تصميم وتطوير تطبيقات مبتكرة مع خبراءنا المحترفين من شركة{" "}
+          <span className="font-sans text-primary font-bold">سيي ميديا</span>
         </p>
       </div>
 
@@ -198,12 +199,13 @@ const ThirdSection: React.FC<ThirdSectionProps> = ({ scrollToContact }) => {
             تحديثات مستمرة
           </p>
         </div>
-        <p className="font-header text-gray-600 px-5 text-justify md:px-16 text-base md:text-lg">
+        <p className=" font-header text-gray-700 px-5 text-justify md:px-16 text-base md:text-lg">
           أطلق عنان إبداعك مع خدمتنا لإنشاء تطبيقات الهاتف المبتكرة! سواء كنت
           تبحث عن توسيع نطاق عملك أو تحسين تجربة عملائك، فإن تطبيقات الهاتف التي
           نقدمها توفر الحلول المثالية. فريقنا المتخصص في التطوير يعمل بجد لتحقيق
           رؤيتك بأفضل الطرق التقنية والجمالية. ابدأ الآن واجعل فكرتك تلمع على
-          شاشات الهواتف الذكية مع سيي ميديا!
+          شاشات الهواتف الذكية مع{" "}
+          <span className="font-sans text-primary font-bold">سيي ميديا !</span>
         </p>
         <TitleAndButton
           title="تواصل معنا الآن"

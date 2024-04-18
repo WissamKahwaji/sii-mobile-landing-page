@@ -98,8 +98,11 @@ const ContactSection = () => {
           <p className="text-secondary max-w-xl mx-auto font-header  text-base md:text-lg">
             نحب أن نسمع منك! سنتواصل معك في أقرب وقت خلال 24 - 48 ساعة.
           </p>
-          <p className="text-gray-500 mt-2 font-header text-sm md:text-lg">
-            اتخذ قرار التغيير و تواصل مع فريق سيي ميديا الاحترافي
+          <p className=" text-gray-600 mt-2 text-sm md:text-lg">
+            اتخذ قرار التغيير و تواصل مع فريق{" "}
+            <span className="font-sans text-primary font-bold">
+              سيي ميديا الاحترافي
+            </span>
           </p>
         </div>
         <div className="mx-auto md:mx-auto my-5 md:my-10 w-[90%] md:w-1/2">

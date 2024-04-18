@@ -40,8 +40,11 @@ const FirstSection: React.FC<FirstSectionProps> = ({ scrollToContact }) => {
         <p className="font-bold font-header text-2xl md:text-3xl text-primary px-2">
           حقق أفضل تواجد فعال مع جمهورك من خلال تطبيقك الالكتروني
         </p>
-        <p className="text-gray-700 font-semibold font-header text-base md:text-lg mt-3">
-          حول أفكارك إلى تطبيق مع فريق سيي ميديا
+        <p className="text-gray-700  font-medium text-base md:text-lg mt-3">
+          حول أفكارك إلى تطبيق مع فريق{" "}
+          <span className="text-secondary font-bold text-lg md:text-2xl">
+            سيي ميديا
+          </span>
         </p>
         <motion.div
           className="flex flex-col items-center justify-center"
